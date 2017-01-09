@@ -5,8 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IvoryDesign"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="Ivory Design Customer Data" Height="350" Width="525">
     <Grid>
-        
+        <TextBox x:Name="firstName" HorizontalAlignment="Left" Height="23" Margin="68,13,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" VerticalContentAlignment="Center" HorizontalContentAlignment="Left"/>
+        <TextBox x:Name="lastName" HorizontalAlignment="Left" Height="23" Margin="193,13,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" VerticalContentAlignment="Center" HorizontalContentAlignment="Left"/>
+        <Label Content="Name" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <Label Content="Address" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="address" HorizontalAlignment="Left" Height="117" Margin="68,44,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="245" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" AcceptsReturn="True"/>
+        <Button x:Name="addData" Content="Add Data" HorizontalAlignment="Left" Margin="238,166,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="clearData" Content="Clear Data" HorizontalAlignment="Left" Margin="78,166,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="updateData" Content="Update Data" HorizontalAlignment="Left" Margin="158,166,0,0" VerticalAlignment="Top" Width="75"/>
+        <DataGrid x:Name="dataGrid" HorizontalAlignment="Stretch" Margin="10,191,10,10" VerticalAlignment="Stretch" CanUserAddRows="False" CanUserDeleteRows="False" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Name" Binding="{Binding Path=Name}"/>
+                <DataGridTextColumn Header="Address" Binding="{Binding Path=Address}"/>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Window>
